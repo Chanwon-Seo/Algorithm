@@ -1,19 +1,21 @@
-package Main;
+package backjoon;
 
 import java.util.Scanner;
 
-public class algorithm_2588 {
+public class backjoon_2588 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		String b = sc.next();
+        int a = sc.nextInt(); // 472
+        String b = sc.next();
 
-		sc.close();
+        sc.close();
 
-		System.out.println(a * (b.charAt(2) - '0'));
-		System.out.println(a * (b.charAt(1) - '0'));
-		System.out.println(a * (b.charAt(0) - '0'));
-		System.out.println(a * Integer.parseInt(b));
-	}
+        System.out.println(a * (b.charAt(2) - '0'));
+        System.out.println(a * (b.charAt(1) - '0'));
+        System.out.println(a * (b.charAt(0) - '0'));
+        System.out.println(a * Integer.parseInt(b));
+
+
+    }
 }
