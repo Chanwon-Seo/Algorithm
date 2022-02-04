@@ -9,8 +9,6 @@ public class backjoon_1065 {
 
         System.out.print(arithmetic_sequence(in.nextInt()));
         in.close();
-
-
     }
 
     public static int arithmetic_sequence(int num) {
