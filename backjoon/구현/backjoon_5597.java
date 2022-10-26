@@ -22,19 +22,3 @@ public class Main {
         System.out.println(sb);
     }
 }
-
-//class Solution {
-//    public int[] solution(int[] num_list) {
-//        int[] arr = num_list;
-//        int[] answer = new int[2];
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            if (arr[i] % 2 == 0) {
-//                answer[0]++;
-//            } else {
-//                answer[1]++;
-//            }
-//        }
-//        return answer;
-//    }
-//}
