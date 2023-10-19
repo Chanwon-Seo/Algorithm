@@ -19,7 +19,7 @@ public class Solution {
                 sum += num;
             }
 
-            sb.append("#").append(i + 1).append(" " + Math.round(sum/10)).append("\n");
+            sb.append("#").append(i + 1).append(" " + Math.round(sum/10.0)).append("\n");
         }
 
         System.out.println(sb);
