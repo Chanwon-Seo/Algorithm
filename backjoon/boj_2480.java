@@ -11,19 +11,14 @@ public class Solution1 {
         int b = Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
 
-        if (a == b && a == c && b == c) {
-            sb.append(String.format("%d", 10000 + (a * 1000)));
-        } else if (a != b && a != c && b != c) {
-            int max = Math.max(a, Math.max(b, c));
-            sb.append(String.format("%d", max * 100));
+        if (a == b && b == c) {
+            sb.append(String.format("%d", 10000 + a * 1000));
+        } else if (a == b || a == c) {
+            sb.append(String.format("%d", 1000 + a * 100));
+        } else if (b == c) {
+            sb.append(String.format("%d", 1000 + b * 100));
         } else {
-            if (a == b) {
-                sb.append(String.format("%d", 1000 + (a * 100)));
-            } else if (a == c) {
-                sb.append(String.format("%d", 1000 + (a * 100)));
-            } else {
-                sb.append(String.format("%d", 1000 + (b * 100)));
-            }
+            sb.append(String.format("%d", Math.max(a, Math.max(b, c))*100));
         }
         System.out.println(sb);
     }
