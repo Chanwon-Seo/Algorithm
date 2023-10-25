@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Solution1 {
+public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
