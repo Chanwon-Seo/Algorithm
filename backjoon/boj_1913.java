@@ -1,0 +1,78 @@
+package backjoon;
+
+import java.io.*;
+
+public class Main {
+    static int[][] arr;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int N = Integer.parseInt(br.readLine());
+        int M = Integer.parseInt(br.readLine());
+
+        int loopN = N;
+
+        int[][] arr = new int[loopN][loopN];
+        int num = loopN * loopN;
+
+        int i = 0;
+        int j = 0;
+        int count = 0;
+
+        while (num > 1) {
+
+            for (; i < loopN - 1; i++) {
+                if (arr[i][j] == 0) {
+                    arr[i][j] = num;
+                    num--;
+                }
+            }
+
+            for (; j < loopN - 1; j++) {
+                if (arr[i][j] == 0) {
+                    arr[i][j] = num;
+                    num--;
+                }
+            }
+
+            for (; i > count; i--) {
+                if (arr[i][j] == 0) {
+                    arr[i][j] = num;
+                    num--;
+                }
+            }
+            for (; j > count; j--) {
+                if (arr[i][j] == 0) {
+                    arr[i][j] = num;
+                    num--;
+                }
+            }
+
+
+            i++;
+            j++;
+            count++;
+            loopN--;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        arr[i][j] = num;
+        int x = 0;
+        int y = 0;
+
+        for (i = 0; i < N; i++) {
+            for (j = 0; j < N; j++) {
+                sb.append(arr[i][j]).append(" ");
+                if (arr[i][j] == M) {
+                    x = i + 1;
+                    y = j + 1;
+                }
+            }
+            sb.append("\n");
+        }
+
+        sb.append(x).append(" ").append(y);
+        System.out.println(sb);
+    }
+}
