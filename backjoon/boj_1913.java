@@ -4,6 +4,15 @@ import java.io.*;
 
 public class Main {
     static int[][] arr;
+    static int i = 0, j = 0;
+
+    public static int solution(int[][] arr, int num) {
+        if (arr[i][j] == 0) {
+            arr[i][j] = num;
+            num--;
+        }
+        return num;
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,39 +25,25 @@ public class Main {
         int[][] arr = new int[loopN][loopN];
         int num = loopN * loopN;
 
-        int i = 0;
-        int j = 0;
         int count = 0;
 
         while (num > 1) {
 
             for (; i < loopN - 1; i++) {
-                if (arr[i][j] == 0) {
-                    arr[i][j] = num;
-                    num--;
-                }
+                num = solution(arr, num);
             }
 
             for (; j < loopN - 1; j++) {
-                if (arr[i][j] == 0) {
-                    arr[i][j] = num;
-                    num--;
-                }
+                num = solution(arr, num);
             }
 
             for (; i > count; i--) {
-                if (arr[i][j] == 0) {
-                    arr[i][j] = num;
-                    num--;
-                }
-            }
-            for (; j > count; j--) {
-                if (arr[i][j] == 0) {
-                    arr[i][j] = num;
-                    num--;
-                }
+                num = solution(arr, num);
             }
 
+            for (; j > count; j--) {
+                num = solution(arr, num);
+            }
 
             i++;
             j++;
@@ -75,4 +70,6 @@ public class Main {
         sb.append(x).append(" ").append(y);
         System.out.println(sb);
     }
+
+
 }
