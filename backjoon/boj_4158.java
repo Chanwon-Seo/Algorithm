@@ -17,26 +17,26 @@ public class Main {
             String str = br.readLine();
             if (str.equals("0 0")) {
                 break;
-            } else {
-                st = new StringTokenizer(str);
-                map = new HashMap<>();
-
-                while (st.hasMoreTokens()) {
-                    int stNum = Integer.parseInt(st.nextToken());
-                    for (int i = 0; i < stNum; i++) {
-                        int num = Integer.parseInt(br.readLine());
-                        map.put(num, map.getOrDefault(num, 0) + 1);
-                    }
-                }
-
-                int count = 0;
-                for (Integer i : map.values()) {
-                    if (i == 2) {
-                        count++;
-                    }
-                }
-                sb.append(count).append("\n");
             }
+            st = new StringTokenizer(str);
+            map = new HashMap<>();
+
+            while (st.hasMoreTokens()) {
+                int stNum = Integer.parseInt(st.nextToken());
+                for (int i = 0; i < stNum; i++) {
+                    int num = Integer.parseInt(br.readLine());
+                    map.put(num, map.getOrDefault(num, 0) + 1);
+                }
+            }
+
+            int count = 0;
+            for (Integer i : map.values()) {
+                if (i == 2) {
+                    count++;
+                }
+            }
+            sb.append(count).append("\n");
+
         }
         System.out.println(sb);
 
