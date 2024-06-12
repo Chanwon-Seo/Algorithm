@@ -2,7 +2,7 @@ package backjoon;
 
 import java.io.*;
 
-public class Main {
+public class boj_1913 {
     static int[][] arr;
     static int i = 0, j = 0;
 

@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class boj_10815 {
     static int[] arrN;
 
     static int solution(int findNum) {

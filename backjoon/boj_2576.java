@@ -1,6 +1,8 @@
+package backjoon;
+
 import java.io.*;
 
-public class Main {
+public class boj_2576 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

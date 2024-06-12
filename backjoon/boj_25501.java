@@ -2,7 +2,7 @@ package backjoon;
 
 import java.io.*;
 
-public class Main {
+public class boj_25501 {
 
     static int result;
 

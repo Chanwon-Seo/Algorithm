@@ -2,7 +2,7 @@ package backjoon;
 
 import java.io.*;
 
-public class Main {
+public class boj_10172 {
     public static void main(String[] args) throws IOException {
         System.out.println("|\\_/|");
         System.out.println("|q p|   /}");

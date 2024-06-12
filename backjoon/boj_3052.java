@@ -2,7 +2,7 @@ package backjoon;
 
 import java.io.*;
 
-public class Main {
+public class boj_3052 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[] arr = new int[11];
