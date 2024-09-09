@@ -1,26 +1,27 @@
 package backjoon;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class boj_8958 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String[] str = new String[n];
+        for (int i = 0; i < n; i++) {
+            str[i] = br.readLine();
+        }
         StringBuilder sb = new StringBuilder();
-        int T = Integer.parseInt(br.readLine());
-
-        for (int i = 0; i < T; i++) {
-            String str = br.readLine();
-
-            int max = 0;
+        for (int i = 0; i < n; i++) {
+            int cnt = 0;
             int sum = 0;
-            for (int j = 0; j < str.length(); j++) {
-                if (str.charAt(j) == 'O') {
-                    sum += ++max;
-                } else {
-                    max = 0;
-                }
+            for (int j = 0; j < str[i].length(); j++) {
+                if (str[i].charAt(j) == 'O') cnt++;
+                else cnt = 0;
+                sum += cnt;
             }
-            sb.append(String.format("%d\n", sum));
+            sb.append(sum).append("\n");
         }
         System.out.println(sb);
     }
