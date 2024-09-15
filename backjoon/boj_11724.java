@@ -18,9 +18,10 @@ public class boj_11724 {
         visited = new boolean[n + 1];
         A = new ArrayList[n + 1];
 
-        for (int i = 1; i < n + 1; i++) {
-            A[i] = new ArrayList<Integer>();
+        for (int i = 1; i <= n; i++) {
+            A[i] = new ArrayList<>();
         }
+
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int s = Integer.parseInt(st.nextToken());
@@ -28,6 +29,7 @@ public class boj_11724 {
             A[s].add(e);
             A[e].add(s);
         }
+
         int cnt = 0;
         for (int i = 1; i <= n; i++) {
             if (!visited[i]) {
@@ -35,13 +37,11 @@ public class boj_11724 {
                 DFS(i);
             }
         }
+
         System.out.println(cnt);
     }
 
     private static void DFS(int v) {
-        if (visited[v]) {
-            return;
-        }
         visited[v] = true;
         for (int i : A[v]) {
             if (!visited[i]) {
@@ -49,5 +49,4 @@ public class boj_11724 {
             }
         }
     }
-
 }
