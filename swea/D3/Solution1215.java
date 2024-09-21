@@ -2,7 +2,7 @@ package swea;
 
 import java.io.*;
 
-public class Solution {
+public class Solution1215 {
     static int T;
 
     static int check(String s, int first, int last) {

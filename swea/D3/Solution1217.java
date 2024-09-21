@@ -3,7 +3,7 @@ package swea;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class Solution1217 {
 
     static Integer factorial(Integer N, int loopNum) {
         if (loopNum <= 1)

@@ -1,11 +1,13 @@
+package swea;
+
 import java.io.*;
 
-public class Solution {
+public class Solution1970 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine().trim());
         StringBuilder sb = new StringBuilder();
-        int[] arr = { 50000, 10000, 5000, 1000, 500, 100, 50, 10, 1 };
+        int[] arr = {50000, 10000, 5000, 1000, 500, 100, 50, 10, 1};
 
         for (int i = 0; i < T; i++) {
             int N = Integer.parseInt(br.readLine());

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class Solution2071 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -19,7 +19,7 @@ public class Solution {
                 sum += num;
             }
 
-            sb.append("#").append(i + 1).append(" " + Math.round(sum/10.0)).append("\n");
+            sb.append("#").append(i + 1).append(" " + Math.round(sum / 10.0)).append("\n");
         }
 
         System.out.println(sb);

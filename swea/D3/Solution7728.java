@@ -3,7 +3,7 @@ package swea;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class Solution7728 {
     static StringBuilder sb = new StringBuilder();
     static boolean[] arr;
 

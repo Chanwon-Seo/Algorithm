@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class Solution2072 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -17,13 +17,13 @@ public class Solution {
             for (int j = 0; j < count; j++) {
 
                 int num = Integer.parseInt(st.nextToken());
-                
+
                 if (num % 2 == 0) {
                     continue;
                 }
                 sum += num;
             }
-            
+
             sb.append("#").append(i + 1).append(" " + sum).append("\n");
         }
 

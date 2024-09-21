@@ -1,7 +1,9 @@
+package swea;
+
 import java.io.*;
 import java.util.*;
 
-public class Solution1 {
+public class Solution1961 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());

@@ -2,7 +2,7 @@ package swea;
 
 import java.io.*;
 
-public class Solution {
+public class Solution1289 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
