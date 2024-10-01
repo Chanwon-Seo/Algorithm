@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-import java.util.TreeSet;
 
 public class Main {
 
@@ -10,15 +9,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
+        boolean[] check = new boolean[2_001];
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        TreeSet<Integer> tSet = new TreeSet<>();
         for (int i = 0; i < N; i++) {
-            tSet.add(Integer.parseInt(st.nextToken()));
+            check[Integer.parseInt(st.nextToken()) + 1000] = true;
         }
 
-        for (int i : tSet) {
-            sb.append(i).append(" ");
+        for (int i = 0; i < 2001; i++) {
+            if (check[i]) {
+                sb.append(i - 1000).append(" ");
+            }
         }
         System.out.println(sb);
     }
