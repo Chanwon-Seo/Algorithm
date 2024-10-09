@@ -30,7 +30,7 @@ public class Main {
             if (num[0] > B) continue;
 
             q.offer(new long[]{num[0] * 2, num[1] + 1});
-            q.offer(new long[]{Long.parseLong(num[0] + "1"), num[1] + 1});
+            q.offer(new long[]{num[0] * 10 + 1, num[1] + 1});
         }
         return -1;
     }
