@@ -10,13 +10,6 @@ public class Main {
                 .replace("XXXX", "AAAA")
                 .replace("XX", "BB");
 
-        boolean flag = false;
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == 'X') {
-                flag = true;
-                break;
-            }
-        }
-        System.out.println(flag ? -1 : input);
+        System.out.println(input.contains("X")? -1:input);
     }
 }
