@@ -16,10 +16,9 @@ public class Main {
             mulNum *= Integer.parseInt(br.readLine());
         }
 
-        String value = String.valueOf(mulNum);
-
-        for (int i = 0; i < value.length(); i++) {
-            arr[value.charAt(i) - 48]++;
+        while (mulNum > 0) {
+            arr[mulNum % 10]++;
+            mulNum /= 10;
         }
 
         for (int i = 0; i < 10; i++) {
