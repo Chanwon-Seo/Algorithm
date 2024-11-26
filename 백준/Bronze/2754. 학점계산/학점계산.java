@@ -1,54 +1,28 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static StringBuilder sb = new StringBuilder();
-    static char mainGrade, subGrade;
-    static char[] subGradeArr = {'+', '0', '-'};
 
     public static void main(String[] args) throws Exception {
-        char[] input = br.readLine().toCharArray();
-        mainGrade = input[0];
-        if (mainGrade != 'F') {
-            subGrade = input[1];
-        }
-        if ('A' == mainGrade) {
-            if (subGradeArr[0] == subGrade) {
-                sb.append("4.3");
-            } else if (subGradeArr[1] == subGrade) {
-                sb.append("4.0");
-            } else if (subGradeArr[2] == subGrade) {
-                sb.append("3.7");
-            }
-        } else if ('B' == mainGrade) {
-            if (subGradeArr[0] == subGrade) {
-                sb.append("3.3");
-            } else if (subGradeArr[1] == subGrade) {
-                sb.append("3.0");
-            } else if (subGradeArr[2] == subGrade) {
-                sb.append("2.7");
-            }
-        } else if ('C' == mainGrade) {
-            if (subGradeArr[0] == subGrade) {
-                sb.append("2.3");
-            } else if (subGradeArr[1] == subGrade) {
-                sb.append("2.0");
-            } else if (subGradeArr[2] == subGrade) {
-                sb.append("1.7");
-            }
-        } else if ('D' == mainGrade) {
-            if (subGradeArr[0] == subGrade) {
-                sb.append("1.3");
-            } else if (subGradeArr[1] == subGrade) {
-                sb.append("1.0");
-            } else if (subGradeArr[2] == subGrade) {
-                sb.append("0.7");
-            }
-        } else {
-            sb.append("0.0");
-        }
-        System.out.println(sb);
+        Map<String, String> gradeList = new HashMap<>();
+        gradeList.put("A+", "4.3");
+        gradeList.put("A0", "4.0");
+        gradeList.put("A-", "3.7");
+        gradeList.put("B+", "3.3");
+        gradeList.put("B0", "3.0");
+        gradeList.put("B-", "2.7");
+        gradeList.put("C+", "2.3");
+        gradeList.put("C0", "2.0");
+        gradeList.put("C-", "1.7");
+        gradeList.put("D+", "1.3");
+        gradeList.put("D0", "1.0");
+        gradeList.put("D-", "0.7");
+        gradeList.put("F", "0.0");
+        String input = br.readLine();
+        System.out.println(gradeList.get(input));
     }
 
 }
