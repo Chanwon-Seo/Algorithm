@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-
+        StringTokenizer st;
         Deque<String> q = new LinkedList<>();
         Stack<Boolean> stack = new Stack<>();
         while (n-- > 0) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
+            st = new StringTokenizer(br.readLine());
             String flag = st.nextToken();
             if ("1".equals(flag)) {
                 q.offer(st.nextToken());
