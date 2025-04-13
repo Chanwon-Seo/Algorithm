@@ -2,16 +2,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class Main {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int[] a = input(new int[n], n);
-        int[] b = input(new int[n], n);
+        String[] splitA = br.readLine().split(" ");
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = Integer.parseInt(splitA[i]);
+        }
+
+        String[] splitB = br.readLine().split(" ");
+        int[] b = new int[n];
+        for (int i = 0; i < n; i++) {
+            b[i] = Integer.parseInt(splitB[i]);
+        }
 
         if (Arrays.equals(a, b)) {
             System.out.println(1);
@@ -34,15 +42,6 @@ public class Main {
         }
 
         System.out.println(0);
-    }
-
-    static int[] input(int[] arr, int length) throws IOException {
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < length; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        return arr;
     }
 
 }
